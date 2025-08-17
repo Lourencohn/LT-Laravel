@@ -46,7 +46,7 @@
                          class="w-full h-48 object-cover">
                 @else
                     <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                        <span class="text-gray-500 dark:text-gray-400">Sem imagem</span>
+                        <span class="text-gray-600 dark:text-gray-300">Sem imagem</span>
                     </div>
                 @endif
                 
@@ -55,11 +55,11 @@
                         {{ $article->title }}
                     </h3>
                     
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3">
+                    <p class="text-sm text-gray-700 dark:text-gray-300 mb-3 line-clamp-3">
                         {!! Str::limit(strip_tags($article->content), 100) !!}
                     </p>
                     
-                    <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <div class="flex justify-between items-center text-sm text-gray-600 dark:text-gray-300 mb-4">
                         <span>{{ $article->published_at->format('d/m/Y') }}</span>
                         <span>{{ $article->developers_count }} dev(s)</span>
                     </div>
@@ -67,12 +67,12 @@
                     <div class="flex justify-between items-center">
                         <div class="flex space-x-2">
                             <a href="{{ route('articles.edit', $article) }}" 
-                               class="text-blue-600 hover:text-blue-800 text-sm">
+                               class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium">
                                 Editar
                             </a>
                             <button wire:click="delete({{ $article->id }})" 
                                     wire:confirm="Tem certeza que deseja excluir este artigo?"
-                                    class="text-red-600 hover:text-red-800 text-sm">
+                                    class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 text-sm font-medium">
                                 Excluir
                             </button>
                         </div>
@@ -81,7 +81,7 @@
             </div>
         @empty
             <div class="col-span-full text-center py-12">
-                <p class="text-gray-500 dark:text-gray-400">Nenhum artigo encontrado.</p>
+                <p class="text-gray-600 dark:text-gray-300">Nenhum artigo encontrado.</p>
                 <a href="{{ route('articles.create') }}" 
                    class="mt-4 inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
                     <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -2,7 +2,7 @@
     <div class="mb-8">
         <div class="flex items-center space-x-4">
             <a href="{{ route('articles.index') }}" 
-               class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+               class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100">
                 ← Voltar
             </a>
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Novo Artigo</h1>
@@ -94,7 +94,7 @@
                             @endforeach
                         </div>
                     @else
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
                             Você precisa cadastrar pelo menos um desenvolvedor antes de criar um artigo.
                             <a href="{{ route('developers.create') }}" class="text-blue-600 hover:text-blue-800">
                                 Cadastrar desenvolvedor

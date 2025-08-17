@@ -2,7 +2,7 @@
     <div class="mb-8">
         <div class="flex items-center space-x-4">
             <a href="{{ route('developers.index') }}" 
-               class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+               class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100">
                 ← Voltar
             </a>
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Novo Desenvolvedor</h1>

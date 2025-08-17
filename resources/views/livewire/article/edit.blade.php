@@ -2,7 +2,7 @@
     <div class="mb-8">
         <div class="flex items-center space-x-4">
             <a href="{{ route('articles.index') }}" 
-               class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+               class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100">
                 ← Voltar
             </a>
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Editar Artigo</h1>
@@ -60,7 +60,7 @@
                     
                     @if($article->cover_image)
                         <div class="mb-3">
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Imagem atual:</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Imagem atual:</p>
                             <img src="{{ asset('storage/covers/' . $article->cover_image) }}" 
                                  alt="Capa atual" 
                                  class="w-32 h-32 object-cover rounded">
@@ -77,7 +77,7 @@
                     
                     @if ($cover_image)
                         <div class="mt-3">
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Nova imagem:</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Nova imagem:</p>
                             <img src="{{ $cover_image->temporaryUrl() }}" 
                                  alt="Preview" 
                                  class="w-32 h-32 object-cover rounded">
@@ -105,7 +105,7 @@
                             @endforeach
                         </div>
                     @else
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
                             Você precisa cadastrar pelo menos um desenvolvedor.
                             <a href="{{ route('developers.create') }}" class="text-blue-600 hover:text-blue-800">
                                 Cadastrar desenvolvedor

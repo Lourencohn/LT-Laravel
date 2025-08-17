@@ -62,21 +62,21 @@
                         {{ $developer->name }}
                     </h3>
                     <span class="px-2 py-1 text-xs font-semibold rounded-full
-                        @if($developer->seniority === 'Jr') bg-green-100 text-green-800
-                        @elseif($developer->seniority === 'Pl') bg-yellow-100 text-yellow-800
-                        @else bg-red-100 text-red-800 @endif">
+                        @if($developer->seniority === 'Jr') bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200
+                        @elseif($developer->seniority === 'Pl') bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200
+                        @else bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 @endif">
                         {{ $developer->seniority }}
                     </span>
                 </div>
                 
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
                     {{ $developer->email }}
                 </p>
                 
                 <div class="mb-4">
                     <div class="flex flex-wrap gap-1">
                         @foreach($developer->skills as $skill)
-                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
                                 {{ $skill }}
                             </span>
                         @endforeach
@@ -84,18 +84,18 @@
                 </div>
                 
                 <div class="flex justify-between items-center">
-                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="text-sm text-gray-600 dark:text-gray-300">
                         {{ $developer->articles_count }} artigo(s)
                     </span>
                     
                     <div class="flex space-x-2">
                         <a href="{{ route('developers.edit', $developer) }}" 
-                           class="text-blue-600 hover:text-blue-800 text-sm">
+                           class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium">
                             Editar
                         </a>
                         <button wire:click="delete({{ $developer->id }})" 
                                 wire:confirm="Tem certeza que deseja excluir este desenvolvedor?"
-                                class="text-red-600 hover:text-red-800 text-sm">
+                                class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 text-sm font-medium">
                             Excluir
                         </button>
                     </div>
@@ -103,7 +103,7 @@
             </div>
         @empty
             <div class="col-span-full text-center py-12">
-                <p class="text-gray-500 dark:text-gray-400">Nenhum desenvolvedor encontrado.</p>
+                <p class="text-gray-600 dark:text-gray-300">Nenhum desenvolvedor encontrado.</p>
             </div>
         @endforelse
     </div>

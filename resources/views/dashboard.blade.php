@@ -18,7 +18,7 @@
                             <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
                                 Bem-vindo, {{ Auth::user()->name }}!
                             </h3>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                            <p class="mt-1 text-sm text-gray-700 dark:text-gray-300">
                                 Gerencie seus desenvolvedores e artigos de forma eficiente.
                             </p>
                         </div>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">Desenvolvedores</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Gerencie sua equipe de desenvolvedores</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Gerencie sua equipe de desenvolvedores</p>
                         </div>
                     </div>
                 </a>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">Artigos</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Crie e gerencie artigos técnicos</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Crie e gerencie artigos técnicos</p>
                         </div>
                     </div>
                 </a>
@@ -74,7 +74,7 @@
                                 <p class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                                     {{ Auth::user()->developers()->count() }}
                                 </p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Desenvolvedores</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Desenvolvedores</p>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 <p class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                                     {{ Auth::user()->articles()->count() }}
                                 </p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Artigos</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Artigos</p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                                 <p class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                                     {{ Auth::user()->articles()->withCount('developers')->get()->sum('developers_count') }}
                                 </p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Conexões</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Conexões</p>
                             </div>
                         </div>
                     </div>
