@@ -174,19 +174,6 @@ resources/
 └── css/              # Estilos Tailwind
 ```
 
-## 🚀 Deploy (Opcional)
-
-### Render.com / Fly.io
-1. Configure as variáveis de ambiente
-2. Configure banco PostgreSQL
-3. Execute migrations: `php artisan migrate --force`
-4. Execute seeders: `php artisan db:seed --force`
-
-### Vercel
-1. Configure para servir arquivos PHP
-2. Configure banco MySQL/PostgreSQL
-3. Configure storage para imagens
-
 ## 🧪 Comandos Úteis
 
 ```bash
